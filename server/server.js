@@ -9,7 +9,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
+const giphyRouter = require('./routes/giphy.router.js');
 
+app.use('/giphy', giphyRouter);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {
